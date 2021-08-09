@@ -18,10 +18,10 @@ sudo apt-get install -y git
 sudo apt-get install -y rename
 sudo apt-get install -y xargs
 
-echo "installing bash_profile aliases from recon_profile"
+echo "installing bash_aliases aliases from mcncyo_profile"
 git clone https://github.com/mcncyo/mcncyo_profile.git
 cd mcncyo_profile
-cat  >> ~/.bash_aliases
+cat  .bash_aliases >> ~/.bash_aliases
 source ~/.bash_aliases
 cd ~/tools/
 echo "done"
