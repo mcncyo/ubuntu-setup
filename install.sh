@@ -69,7 +69,7 @@ echo "Don't forget to set up AWS credentials!"
 
 #create a tools folder in ~/
 mkdir /home/mcncyo/tools
-cd /home/mcncyo/tools/
+cd ~/tools/
 
 #install aquatone
 echo "Installing Aquatone"
@@ -85,20 +85,20 @@ echo "installing JSParser"
 git clone https://github.com/nahamsec/JSParser.git
 cd JSParser*
 sudo python setup.py install
-cd  /home/mcncyo/tools/
+cd  ~/tools/
 echo "done"
 
 echo "installing Sublist3r"
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r*
 pip install -r requirements.txt
-cd /home/mcncyo/tools/
+cd ~/tools/
 echo "done"
 
 
 echo "installing teh_s3_bucketeers"
 git clone https://github.com/tomdev/teh_s3_bucketeers.git
-cd /home/mcncyo/tools/
+cd ~/tools/
 echo "done"
 
 
@@ -106,39 +106,39 @@ echo "installing wpscan"
 git clone https://github.com/wpscanteam/wpscan.git
 cd wpscan*
 sudo gem install bundler && bundle install --without test
-cd /home/mcncyo/tools/
+cd ~/tools/
 echo "done"
 
 echo "installing dirsearch"
 git clone https://github.com/maurosoria/dirsearch.git
-cd /home/mcncyo/tools/
+cd ~/tools/
 echo "done"
 
 
 echo "installing lazys3"
 git clone https://github.com/nahamsec/lazys3.git
-cd /home/mcncyo/tools/
+cd ~/tools/
 echo "done"
 
 echo "installing virtual host discovery"
 git clone https://github.com/jobertabma/virtual-host-discovery.git
-cd /home/mcncyo/tools/
+cd ~/tools/
 echo "done"
 
 
 echo "installing sqlmap"
 git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
-cd /home/mcncyo/tools/
+cd ~/tools/
 echo "done"
 
 echo "installing knock.py"
 git clone https://github.com/guelfoweb/knock.git
-cd /home/mcncyo/tools/
+cd ~/tools/
 echo "done"
 
 echo "installing lazyrecon"
 git clone https://github.com/nahamsec/lazyrecon.git
-cd /home/mcncyo/tools/
+cd ~/tools/
 echo "done"
 
 echo "installing nmap"
@@ -147,16 +147,16 @@ echo "done"
 
 echo "installing massdns"
 git clone https://github.com/blechschmidt/massdns.git
-cd /home/mcncyo/tools/massdns
+cd ~/tools/massdns
 make
-cd /home/mcncyo/tools/
+cd ~/tools/
 echo "done"
 
 echo "installing asnlookup"
 git clone https://github.com/yassineaboukir/asnlookup.git
-cd /home/mcncyo/tools/asnlookup
+cd ~/tools/asnlookup
 pip install -r requirements.txt
-cd /home/mcncyo/tools/
+cd ~/tools/
 echo "done"
 
 echo "installing httprobe"
@@ -176,12 +176,12 @@ git clone https://github.com/nahamsec/crtndstry.git
 echo "done"
 
 echo "downloading Seclists"
-cd /home/mcncyo/tools/
+cd ~/tools/
 git clone https://github.com/danielmiessler/SecLists.git
-cd /home/mcncyo/tools/SecLists/Discovery/DNS/
+cd ~/tools/SecLists/Discovery/DNS/
 ##THIS FILE BREAKS MASSDNS AND NEEDS TO BE CLEANED
 cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
-cd /home/mcncyo/tools/
+cd ~/tools/
 echo "done"
 
 
