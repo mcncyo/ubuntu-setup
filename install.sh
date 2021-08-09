@@ -37,8 +37,8 @@ select choice in "${choices[@]}"; do
                 yes)
 
 					echo "Installing Golang"
-					wget https://dl.google.com/go/go1.13.4.linux-amd64.tar.gz
-					sudo tar -xvf go1.13.4.linux-amd64.tar.gz
+					wget https://golang.org/dl/go1.16.7.linux-amd64.tar.gz
+					sudo tar -xvf go1.16.7.linux-amd64.tar.gz
 					sudo mv go /usr/local
 					export GOROOT=/usr/local/go
 					export GOPATH=$HOME/go
@@ -62,13 +62,13 @@ fi
 
 #Don't forget to set up AWS credentials!
 echo "Don't forget to set up AWS credentials!"
-apt install -y awscli
+sudo apt install -y awscli
 echo "Don't forget to set up AWS credentials!"
 
 
 
 #create a tools folder in ~/
-mkdir /home/mcncyo/tools
+mkdir -p ~/tools
 cd ~/tools/
 
 #install aquatone
@@ -79,6 +79,10 @@ echo "done"
 #install chromium
 echo "Installing Chromium"
 sudo snap install chromium
+echo "done"
+
+echo "installing  assetfinder"
+go get -u github.com/tomnomnom/assetfinder
 echo "done"
 
 echo "installing JSParser"
@@ -93,6 +97,19 @@ git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r*
 pip install -r requirements.txt
 cd ~/tools/
+echo "done"
+
+echo "installing gobuster"
+go get github.com/OJ/gobuster
+echo "done"
+
+echo "installing subfinder"
+go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
+echo "done"
+
+echo "installing amass"
+export GO111MODULE=on
+go get -v -u github.com/OWASP/Amass/v3/...
 echo "done"
 
 
