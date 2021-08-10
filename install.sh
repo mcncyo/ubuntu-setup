@@ -1,11 +1,4 @@
 #!/bin/bash
-#install gui programs	
-if ask "Do you have a gui" Y; then
-    echo "installing gui programs"
-	sudo snap install --classic code
-	echo "done"
-fi
-
 
 sudo apt-get -y update
 sudo apt-get -y upgrade
