@@ -1,7 +1,7 @@
-# BBHT
+# ubutu_setup is desgin for hacking 
 
-Bug Bounty Hunting Tools is a script to install the most popular tools used while looking for vulnerabilities for a bug bounty program.
- 
+ubutu setup is a set of scripts to install and configure a complete ubuntu system to be used for hacking.
+
 # Tools
 
 - dirsearch
@@ -23,11 +23,12 @@ Bug Bounty Hunting Tools is a script to install the most popular tools used whil
 - Seclists collection
 
 This script also grabs the aliases created and published here:
-https://github.com/nahamsec/recon_profile
-
+https://github.com/mcncyo/mcncyo_profile.git
 
 # Installing
-- git clone https://github.com/nahamsec/bbht.git
-- cd bbht
+
+- sudo apt install git
+- git clone https://github.com/mcncyo/ubuntu-setup.git
+- cd ubuntu-setup
 - chmod +x install.sh
 - ./install.sh

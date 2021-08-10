@@ -18,7 +18,7 @@ sudo apt-get install -y git
 sudo apt-get install -y rename
 sudo apt-get install -y xargs
 
-echo "installing bash_aliases aliases from mcncyo_profile"
+echo "installing bash_aliases  from mcncyo_profile"
 git clone https://github.com/mcncyo/mcncyo_profile.git
 cd mcncyo_profile
 cat  .bash_aliases >> /home/mcncyo/.bash_aliases
@@ -252,7 +252,7 @@ select choice in "${choices[@]}"; do
 				echo -e "\n\n\n\installing gui\n\n\n"
 				
 				echo "install vscode"
-				sudo snap install --classic vscode
+				sudo snap install --classic code
 				echo "done"
 				;;
 
