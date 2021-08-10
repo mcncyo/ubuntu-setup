@@ -254,6 +254,7 @@ select choice in "${choices[@]}"; do
 				echo "install vscode"
 				sudo snap install --classic code
 				echo "done"
+				break
 				;;
 
 
@@ -263,6 +264,7 @@ select choice in "${choices[@]}"; do
 				no)
 
 				echo "not install gui things"
+				break
 				;;
 					
 					
