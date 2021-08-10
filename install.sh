@@ -226,7 +226,7 @@ tar -xzvf /tmp/hydra.tar.gz -C /tmp/
 cd /tmp/openssl-1.0.2g/
 ./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl
 make
-make install
+sudo make install
 cd /tmp/
 rm -rf /tmp/hydra.tar.gz /tmp/openssl-1.0.2g
 echo "done"
@@ -250,6 +250,7 @@ select choice in "${choices[@]}"; do
 				echo "install vscode"
 				sudo snap install --classic vscode
 				echo "done"
+				;;
 
 
 
@@ -258,6 +259,7 @@ select choice in "${choices[@]}"; do
 				no)
 
 				echo "not install gui things"
+				;;
 					
 					
 	esac	
