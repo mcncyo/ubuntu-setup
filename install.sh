@@ -207,12 +207,68 @@ cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 cd ~/tools/
 echo "done"
 
+echo "installing metasploit"
+mkdir temp
+cd temp/
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
+echone "done"
+
+
+
+echo "installing hydra"
+apt-get install libssl-dev libssh-dev libidn11-dev libpcre3-dev \
+                 libgtk2.0-dev libmysqlclient-dev libpq-dev libsvn-dev \
+                 firebird-dev libmemcached-dev libgpg-error-dev \
+                 libgcrypt11-dev libgcrypt20-dev
+
+wget -O /tmp/hydra.tar.gz https://www.openssl.org/source/openssl-1.0.2g.tar.gz
+tar -xzvf /tmp/hydra.tar.gz -C /tmp/
+cd /tmp/openssl-1.0.2g/
+./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl
+make
+make install
+cd /tmp/
+rm -rf /tmp/hydra.tar.gz /tmp/openssl-1.0.2g
+echo "done"
+
+
+
+
+
+
+#install gui and tools	
+
+echo "Do you want to install gui"
+PS3="Please select an option : "
+choices=("yes" "no")
+select choice in "${choices[@]}"; do
+        case $choice in
+                yes)
+
+				echo -e "\n\n\n\installing gui\n\n\n"
+				
+				echo "install vscode"
+				sudo snap install --classic vscode
+				echo "done"
+
+
+
+
+					
+				no)
+
+				echo "not install gui things"
+					
+					
+	esac	
+done
+fi
+
 
 echo "checking for updates"
 sudo apt update
 sudo apt upgrade
 echo "done"
-
 
 echo "remove old apt packages"
 sudo apt autoremove -y
