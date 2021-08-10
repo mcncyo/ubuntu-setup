@@ -204,6 +204,10 @@ git clone https://github.com/danielmiessler/SecLists.git
 cd ~/tools/SecLists/Discovery/DNS/
 ##THIS FILE BREAKS MASSDNS AND NEEDS TO BE CLEANED
 cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
+cd ~/tools/SecLists/Passwords/Leak-databases/
+tar -xzf rockyou.tar.gz
+cd ~/
+ln -s ~/tools/SecLists/Passwords/rockyou.txt rockyou.txt
 cd ~/tools/
 echo "done"
 
