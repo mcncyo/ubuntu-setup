@@ -32,5 +32,3 @@ https://github.com/mcncyo/mcncyo_profile.git
 - cd ubuntu-setup
 - chmod +x install.sh
 - ./install.sh
-
-this is a test 
