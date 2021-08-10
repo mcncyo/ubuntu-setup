@@ -2,6 +2,13 @@
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
+#install gui programs	
+if ask "Do you have a gui" Y; then
+    echo "installing gui programs"
+	sudo snap install --classic code
+	echo "done"
+fi
+
 
 sudo apt-get install -y libcurl4-openssl-dev
 sudo apt-get install -y libssl-dev
@@ -14,7 +21,6 @@ sudo apt-get install -y libldns-dev
 sudo apt-get install -y python3-pip
 sudo apt-get install -y python-pip
 sudo apt-get install -y python-dnspython
-sudo apt-get install -y git
 sudo apt-get install -y rename
 sudo apt-get install -y xargs
 
@@ -28,36 +34,26 @@ echo "done"
 
 
 #install go
-if [[ -z "$GOPATH" ]];then
-echo "It looks like go is not installed, would you like to install it now"
-PS3="Please select an option : "
-choices=("yes" "no")
-select choice in "${choices[@]}"; do
-        case $choice in
-                yes)
+if [ <some test> ]
 
-					echo "Installing Golang"
-					wget https://golang.org/dl/go1.16.7.linux-amd64.tar.gz
-					sudo tar -xvf go1.16.7.linux-amd64.tar.gz
-					sudo mv go /usr/local
-					export GOROOT=/usr/local/go
-					export GOPATH=$HOME/go
-					export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-					echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile
-					echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
-					echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile	
-					source ~/.bash_profile
-					sleep 1
-					break
-					;;
-				no)
-					echo "Please install go and rerun this script"
-					echo "Aborting installation..."
-					exit 1
-					;;
-	esac	
-done
+
+if [[ -z "$GOPATH" ]];then
+
+	echo "Installing Golang"
+	wget https://golang.org/dl/go1.16.7.linux-amd64.tar.gz
+	sudo tar -xvf go1.16.7.linux-amd64.tar.gz
+	sudo mv go /usr/local
+	export GOROOT=/usr/local/go
+	export GOPATH=$HOME/go
+	export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+	echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile
+	echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
+	echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile	
+	source ~/.bash_profile
+	sleep 1
+	break
 fi
+
 
 
 #Don't forget to set up AWS credentials!
@@ -235,42 +231,6 @@ cd /tmp/
 rm -rf /tmp/hydra.tar.gz /tmp/openssl-1.0.2g
 echo "done"
 
-
-
-
-
-
-#install gui and tools	
-
-echo "Do you want to install gui"
-PS3="Please select an option : "
-choices=("yes" "no")
-select choice in "${choices[@]}"; do
-        case $choice in
-                yes)
-
-				echo -e "\n\n\n\installing gui\n\n\n"
-				
-				echo "install vscode"
-				sudo snap install --classic code
-				echo "done"
-				break
-				;;
-
-
-
-
-					
-				no)
-
-				echo "not install gui things"
-				break
-				;;
-					
-					
-	esac	
-done
-fi
 
 
 echo "checking for updates"
