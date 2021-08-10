@@ -85,6 +85,12 @@ echo "installing  assetfinder"
 go get -u github.com/tomnomnom/assetfinder
 echo "done"
 
+
+echo "installing docker"
+sudo apt-get install -y docker.io docker-compose docker-engine docker-machine docker ifupdown aufs-tools btrfs-progs cgroupfs-mount
+echo "done"
+
+
 echo "installing JSParser"
 git clone https://github.com/nahamsec/JSParser.git
 cd JSParser*
@@ -202,6 +208,15 @@ cd ~/tools/
 echo "done"
 
 
+echo "checking for updates"
+sudo apt update
+sudo apt upgrade
+echo "done"
+
+
+echo "remove old apt packages"
+sudo apt autoremove -y
+echo "done"
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
