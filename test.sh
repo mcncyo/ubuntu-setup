@@ -1,11 +1,10 @@
-#!/bin/bash
-if [ "$1" = "gui" ]; then
-  apt install git
-else
-  echo "not install"
-fi
-if [ "$2" = "vbox" ]; then
-  apt install vbox
-else
-  echo "not install vbox"
-fi
+#!/bin/sh
+while getopts "vr" f
+do
+  case "$f" in
+    v) echo "verbose" ;;
+    r) echo "recursive" ;;
+    *) echo "usage: $0 [-v] [-r]" >&2
+       exit 1 ;;
+  esac
+done
