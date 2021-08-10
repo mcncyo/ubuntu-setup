@@ -1,7 +1,4 @@
 #!/bin/bash
-sudo apt-get -y update
-sudo apt-get -y upgrade
-
 #install gui programs	
 if ask "Do you have a gui" Y; then
     echo "installing gui programs"
@@ -10,6 +7,8 @@ if ask "Do you have a gui" Y; then
 fi
 
 
+sudo apt-get -y update
+sudo apt-get -y upgrade
 sudo apt-get install -y libcurl4-openssl-dev
 sudo apt-get install -y libssl-dev
 sudo apt-get install -y jq
