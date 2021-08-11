@@ -1,3 +1,8 @@
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
+
+
 ##hacking commands
 alias rustscan='docker run -it --rm --name rustscan rustscan/rustscan:2.0.1 -a'
 alias zap='docker run -it --rm --name zap2docker owasp/zap2docker-stable'
