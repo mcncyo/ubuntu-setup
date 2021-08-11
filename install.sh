@@ -205,9 +205,10 @@ cd ~/tools/SecLists/Discovery/DNS/
 ##THIS FILE BREAKS MASSDNS AND NEEDS TO BE CLEANED
 cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 cd ~/tools/SecLists/Passwords/Leak-databases/
-tar -xzf rockyou.tar.gz
+rm -f rockyou-*.txt
+tar -xzf rockyou.txt.tar.gz
 cd ~/
-ln -s ~/tools/SecLists/Passwords/rockyou.txt rockyou.txt
+ln -s ~/tools/SecLists/Passwords/rockyou.txt ~/rockyou.txt
 cd ~/tools/
 echo "done"
 
@@ -239,7 +240,7 @@ echo "done"
 
 echo "checking for updates"
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y 
 echo "done"
 
 echo "remove old apt packages"
@@ -252,7 +253,7 @@ cd mcncyo_profile
 cp .bash_aliases  /home/mcncyo/.bash_aliases
 echo "done"
 
-
+cd ~/tools/
 echo "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
 echo "One last time: don't forget to set up AWS credentials in ~/.aws/!"
