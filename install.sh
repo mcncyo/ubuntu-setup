@@ -33,12 +33,7 @@ sudo make install
 
 
 
-echo "installing bash_aliases  from mcncyo_profile"
-git clone https://github.com/mcncyo/mcncyo_profile.git
-cd mcncyo_profile
-cat  .bash_aliases >> /home/mcncyo/.bash_aliases
-source ~/.bash_aliases
-echo "done"
+
 
 
 
@@ -250,6 +245,14 @@ echo "done"
 echo "remove old apt packages"
 sudo apt autoremove -y
 echo "done"
+
+echo "installing bash_aliases  from mcncyo_profile"
+git clone https://github.com/mcncyo/mcncyo_profile.git
+cd mcncyo_profile
+cat  .bash_aliases >> /home/mcncyo/.bash_aliases
+source ~/.bash_profile
+echo "done"
+
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
