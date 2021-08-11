@@ -25,8 +25,7 @@ wget https://github.com/tmux/tmux/releases/download/3.2a/tmux-3.2a.tar.gz	| tar 
 cd tmux-3.2a
 ./configure && make
 sudo make install
-cd ~
-sudo rm -rf source
+
 
 
 
