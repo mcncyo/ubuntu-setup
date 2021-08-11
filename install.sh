@@ -255,7 +255,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 echo "done"
 
 
-echo "installing bash_aliases and tmux config
+echo "installing bash_aliases and tmux config"
 cp .bash_aliases  ~/.bash_aliases
 cp tmux.conf ~/.tmux.conf
 echo "done"
