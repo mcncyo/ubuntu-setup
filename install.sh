@@ -246,9 +246,22 @@ echo "done"
 echo "remove old apt packages"
 sudo apt autoremove -y
 echo "done"
+sudo apt autoclean -y
 
-echo "installing bash_aliases  from mcncyo_profile"
-cp .bash_aliases  /home/mcncyo/.bash_aliases
+
+echo "install fzf"
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+echo "done"
+
+
+echo "installing bash_aliases and tmux config
+cp .bash_aliases  ~/.bash_aliases
+cp tmux.conf ~/.tmux.conf
+echo "done"
+
+echo "installing  tpm plugins"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "done"
 
 cd ~/tools/
