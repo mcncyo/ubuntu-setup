@@ -21,6 +21,7 @@ mkdir source
 cd source
 
 # install tmux
+
 wget https://github.com/tmux/tmux/releases/download/3.2a/tmux-3.2a.tar.gz
 tar -xzvf tmux-3.2a.tar.gz
 cd tmux-3.2a
@@ -36,9 +37,8 @@ sudo make install
 
 
 
-
 #install go
-if [ <some test> ]
+
 
 
 if [[ -z "$GOPATH" ]];then
@@ -253,6 +253,6 @@ cp .bash_aliases  /home/mcncyo/.bash_aliases
 echo "done"
 
 
-echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
+echo "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
 echo "One last time: don't forget to set up AWS credentials in ~/.aws/!"
