@@ -248,8 +248,6 @@ sudo apt autoremove -y
 echo "done"
 
 echo "installing bash_aliases  from mcncyo_profile"
-git clone https://github.com/mcncyo/mcncyo_profile.git
-cd mcncyo_profile
 cp .bash_aliases  /home/mcncyo/.bash_aliases
 echo "done"
 
