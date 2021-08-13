@@ -11,6 +11,8 @@ sudo snap install --classic code
 echo "done"
 
 echo "install terminator"
-sudo snap install --classic terminator
+sudo add-apt-repository ppa:mattrose/terminator
+sudo apt-get update
+sudo apt-get install terminator
 echo "done"
 

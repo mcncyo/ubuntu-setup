@@ -82,7 +82,7 @@ echo "done"
 
 
 echo "installing docker"
-sudo apt-get install -y docker.io docker-compose docker-engine docker-machine docker ifupdown aufs-tools btrfs-progs cgroupfs-mount
+sudo aptinstall -y docker.io docker-compose docker ifupdown aufs-tools btrfs-progs cgroupfs-mount
 echo "done"
 
 
@@ -101,7 +101,7 @@ cd ~/tools/
 echo "done"
 
 echo "installing gobuster"
-go get github.com/OJ/gobuster
+go install github.com/OJ/gobuster/v3@latest
 echo "done"
 
 echo "installing subfinder"
@@ -255,8 +255,8 @@ go get github.com/OJ/gobuster
 echo "done"
 
 
-echo "installing bash_aliases and tmux config"
-cp .bash_aliases  ~/.bash_aliases
+echo "installing bash_aliases"
+cp ~/ubuntu-setup/bash_aliases  ~/.bash_aliases
 
 echo "done"
 
