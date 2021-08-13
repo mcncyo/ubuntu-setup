@@ -20,13 +20,8 @@ sudo apt-get install -y xargs
 mkdir source
 cd source
 
-# install tmux
 
-wget https://github.com/tmux/tmux/releases/download/3.2a/tmux-3.2a.tar.gz
-tar -xzvf tmux-3.2a.tar.gz
-cd tmux-3.2a
-./configure && make
-sudo make install
+
 
 
 
@@ -255,14 +250,30 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 echo "done"
 
 
-echo "installing bash_aliases and tmux config"
-cp .bash_aliases  ~/.bash_aliases
-cp tmux.conf ~/.tmux.conf
+echo "install gobuster"
+go get github.com/OJ/gobuster
 echo "done"
 
-echo "installing  tpm plugins"
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+echo "installing bash_aliases and tmux config"
+cp .bash_aliases  ~/.bash_aliases
+
 echo "done"
+
+
+
+echo "install mysql client"
+sudo apt-get install -y mysql-client
+echo "done"
+
+echo "install metasploit"
+mkdir temp
+cd temp/
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
+echo "done"
+
+
+
 
 cd ~/tools/
 echo "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
