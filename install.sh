@@ -82,7 +82,7 @@ echo "done"
 
 
 echo "installing docker"
-sudo aptinstall -y docker.io docker-compose docker ifupdown aufs-tools btrfs-progs cgroupfs-mount
+sudo apt install -y docker.io docker-compose docker ifupdown aufs-tools btrfs-progs cgroupfs-mount
 echo "done"
 
 
