@@ -16,7 +16,7 @@ sudo apt-get install -y python-pip
 sudo apt-get install -y python-dnspython
 sudo apt-get install -y rename
 sudo apt-get install -y xargs
-
+sudo apt install -y python3.8-venv
 mkdir source
 cd source
 
@@ -82,7 +82,8 @@ echo "done"
 
 
 echo "installing docker"
-sudo apt install -y docker.io docker-compose docker ifupdown aufs-tools btrfs-progs cgroupfs-mount
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
 echo "done"
 
 
@@ -214,9 +215,20 @@ curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/t
 echone "done"
 
 echo "install SearchSploit"
-$ sudo git clone https://github.com/offensive-security/exploitdb.git /opt/exploitdb
-$ sudo ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit
+sudo git clone https://github.com/offensive-security/exploitdb.git /opt/exploitdb
+sudo ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit
 echo "done"
+
+echo "install masscan"
+cd ~/source
+git clone https://github.com/robertdavidgraham/masscan.git
+cd masscan
+make 
+sudo make install
+cd ~
+echo "done"
+
+
 
 
 echo "installing hydra"
