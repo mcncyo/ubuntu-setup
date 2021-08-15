@@ -270,16 +270,6 @@ echo "install gobuster"
 go get github.com/OJ/gobuster
 echo "done"
 
-
-echo "install bat"
-go get github.com/shiena/ansicolor
-go get github.com/mattn/go-colorable
-go get github.com/jhaddix/bat
-echo "done"
-
-
-
-
 echo "installing bash_aliases"
 cp ~/ubuntu-setup/bash_aliases  ~/.bash_aliases
 
