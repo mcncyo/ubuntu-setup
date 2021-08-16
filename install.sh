@@ -74,9 +74,7 @@ echo "done"
 echo "installing docker"
 curl https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
-sudo groupadd docker
 sudo usermod -aG docker $USER
-newgrp docker
 echo "done"
 
 
