@@ -18,21 +18,7 @@ sudo apt-get install -y rename
 sudo apt-get install -y xargs
 sudo apt install -y python3.8-venv
 mkdir source
-cd source
-
-
-
-
-
-
-
-
-
-
-
-
-
-#install go
+cd sourc#install go
 
 
 
@@ -52,6 +38,9 @@ if [[ -z "$GOPATH" ]];then
 	sleep 1
 	break
 fi
+
+
+sudo snap install curl
 
 
 
@@ -80,10 +69,14 @@ echo "installing  assetfinder"
 go get -u github.com/tomnomnom/assetfinder
 echo "done"
 
+# need to fix this
 
 echo "installing docker"
-curl -fsSL https://get.docker.com -o get-docker.sh
+curl https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
 echo "done"
 
 
@@ -286,6 +279,7 @@ mkdir temp
 cd temp/
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
 echo "done"
+
 
 
 
