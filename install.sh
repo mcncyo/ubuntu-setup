@@ -171,6 +171,7 @@ echo "done"
 
 echo "installing httprobe"
 go get -u github.com/tomnomnom/httprobe 
+
 echo "done"
 
 echo "installing unfurl"
@@ -276,7 +277,13 @@ echo "install metasploit"
 mkdir temp
 cd temp/
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
+cd ..
 echo "done"
+
+echo "install nikto"
+sudo apt-get install -y nikto
+echo "done"
+
 
 
 
