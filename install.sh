@@ -93,7 +93,7 @@ cd ~/tools/
 echo "done"
 
 echo "installing gobuster"
-sudo apt install gobuster
+sudo apt install -y gobuster 
 echo "done"
 
 echo "installing subfinder"
@@ -267,6 +267,9 @@ cp ~/ubuntu-setup/bash_aliases  ~/.bash_aliases
 
 echo "done"
 
+echo "install hexedit"
+sudo apt-get install -y hexedit
+echo "done"
 
 
 echo "install mysql client"
