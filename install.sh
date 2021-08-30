@@ -296,7 +296,15 @@ echo "done"
 
 
 
+echo "install pawncat"
+cd ~/tools/git/
+git clone https://github.com/calebstewart/pwncat.git
+cd ~/tools/git/pwncat/
+python3 -m venv pwncat-env
+source pwncat-env/bin/activate
+python setup.py install
 
+echo "done"
 
 
 
