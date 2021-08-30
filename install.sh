@@ -16,6 +16,33 @@ sudo apt-get install -y python-pip
 sudo apt-get install -y python-dnspython
 sudo apt-get install -y rename
 sudo apt-get install -y xargs
+echo "install nikto"
+sudo apt-get install -y nikto
+echo "done"
+
+echo "install katana"
+sudo apt-get install -y python-tk tk-dev libffi-dev libssl-dev pandoc \
+	libgmp3-dev libzbar-dev tesseract-ocr xsel libpoppler-cpp-dev libmpc-dev \
+	libdbus-glib-1-dev ruby libenchant-dev apktool nodejs groff binwalk \
+	foremost tcpflow poppler-utils exiftool steghide stegsnow bison ffmpeg \
+	libgd-dev less
+
+pip3 install image
+cd ~
+mkdir github
+cd github
+git clone https://github.com/JohnHammond/katana.git
+cd katana
+python3 -m venv env
+source env/bin/activate
+python setup.py install
+echo "done"
+
+
+
+
+
+
 sudo apt install -y python3.8-venv
 mkdir source
 cd sourc#install go
@@ -283,9 +310,7 @@ curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/t
 cd ..
 echo "done"
 
-echo "install nikto"
-sudo apt-get install -y nikto
-echo "done"
+
 
 echo "install pawncat"
 cd ~/tools/git/
