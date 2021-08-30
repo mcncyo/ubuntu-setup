@@ -303,7 +303,7 @@ cd ~/tools/git/pwncat/
 python3 -m venv pwncat-env
 source pwncat-env/bin/activate
 python setup.py install
-
+sudo ln -s ~/tools/git/pwncat/pwncat-env/bin/pwncat /usr/local/bin/pwncat
 echo "done"
 
 
