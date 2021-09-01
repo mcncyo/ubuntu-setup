@@ -11,7 +11,7 @@ alias searchsploit='/opt/exploitdb/searchsploit'
 
 
 alias gobusterdir='~/go/bin/gobuster dir -w ~/tools/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt'
-
+alias gobuster='~/go/bin/gobuster'
 
 # ls commands
 alias ll='ls-lh'
