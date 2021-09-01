@@ -104,7 +104,7 @@ cd ~/tools/
 echo "done"
 
 echo "installing gobuster"
-sudo apt install -y gobuster 
+go install github.com/OJ/gobuster/v3@latest
 echo "done"
 
 echo "installing subfinder"
