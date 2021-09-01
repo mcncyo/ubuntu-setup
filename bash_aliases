@@ -10,6 +10,9 @@ alias enum='docker run -t enum4linux-ng -As'
 alias searchsploit='/opt/exploitdb/searchsploit'
 
 
+alias gobusterdir='~/go/bin/gobuster dir -w ~/tools/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt'
+
+
 # ls commands
 alias ll='ls-lh'
 alias ls='ls -F'
