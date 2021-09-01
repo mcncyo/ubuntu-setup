@@ -23,7 +23,7 @@
         - Seclists collection
 
 This script also grabs the aliases created and published here:
-https://github.com/mcncyo/mcncyo_profile.git
+    - https://github.com/mcncyo/mcncyo_profile.git
 
     # Installing
 
