@@ -214,11 +214,12 @@ echo "installing metasploit"
 mkdir temp
 cd temp/
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
-echone "done"
+echo "done"
 
 echo "install SearchSploit"
 sudo git clone https://github.com/offensive-security/exploitdb.git /opt/exploitdb
 sudo ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit
+searchsploit -u
 echo "done"
 
 echo "install masscan"
