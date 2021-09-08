@@ -71,9 +71,8 @@ echo "Installing Aquatone"
 go get github.com/michenriksen/aquatone
 echo "done"
 
-#install chromium
-echo "Installing Chromium"
-sudo snap install chromium
+echo "github-subdomains"
+go get -u github.com/gwen001/github-subdomains
 echo "done"
 
 echo "installing  assetfinder"
@@ -282,6 +281,10 @@ echo "install hexedit"
 sudo apt-get install -y hexedit
 echo "done"
 
+echo "shosubgo"
+$ go get github.com/incogbyte/shosubgo/apishodan
+$ go build main.go
+echo "done"
 
 echo "install mysql client"
 sudo apt-get install -y mysql-client
